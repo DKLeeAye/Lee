@@ -28,35 +28,39 @@ namespace Tree
             Node<string> nodeC = rootNode.rchild;
             bTree.InsertRight(nodeC, "F");
             // 计算二叉树目前的深度
-            Console.WriteLine("The depth of the tree : {0}", bTree.GetDepth(bTree.Root));
+            Console.WriteLine("二叉树目前的深度是: {0}", bTree.GetDepth(bTree.Root));
+
+
+
 
             // 前序遍历
-            Console.WriteLine("---------PreOrder---------");
+            Console.WriteLine("---------前序遍历---------");
             bTree.PreOrder(bTree.Root);
             // 中序遍历
             Console.WriteLine();
-            Console.WriteLine("---------MidOrder---------");
+            Console.WriteLine("---------中序遍历---------");
             bTree.MidOrder(bTree.Root);
             // 后序遍历
             Console.WriteLine();
-            Console.WriteLine("---------PostOrder---------");
+            Console.WriteLine("---------后续遍历---------");
             bTree.PostOrder(bTree.Root);
             Console.WriteLine();
+
+
+
             // 前序遍历（非递归）
-            Console.WriteLine("---------PreOrderNoRecurise---------");
+            Console.WriteLine("---------前序遍历（非递归）---------");
             bTree.PreOrderNoRecurise(bTree.Root);
             // 中序遍历（非递归）
             Console.WriteLine();
-            Console.WriteLine("---------MidOrderNoRecurise---------");
+            Console.WriteLine("---------中序遍历（非递归）---------");
             bTree.MidOrderNoRecurise(bTree.Root);
             // 后序遍历（非递归）
             Console.WriteLine();
-            Console.WriteLine("---------PostOrderNoRecurise---------");
+            Console.WriteLine("---------后序遍历（非递归）---------");
             bTree.PostOrderNoRecurise(bTree.Root);
             Console.WriteLine();
-            // 层次遍历
-            Console.WriteLine("---------LevelOrderNoRecurise---------");
-            bTree.LevelOrder(bTree.Root);
+            
         }
 
 

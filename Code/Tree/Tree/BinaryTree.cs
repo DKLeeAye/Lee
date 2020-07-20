@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Tree
 {
-   public class BinaryTree<T>
+   public class BinaryTree<T>          //二叉树类
     {
         // 二叉树的根节点
-        private Node<T> root;
-        public Node<T> Root
+        private Node<T> root;         
+        public Node<T> Root   
         {
             get
             {
@@ -16,6 +16,7 @@ namespace Tree
             }
         }
 
+        //二叉树
         public BinaryTree() { }
 
         public BinaryTree(T data)
@@ -23,7 +24,6 @@ namespace Tree
             this.root = new Node<T>(data);
         }
 
-        #region 基本的创建与移除方法
         //判断该二叉树是否是空树
         public bool IsEmpty()
         {
@@ -105,9 +105,12 @@ namespace Tree
                 return rightDepth + 1;
             }
         }
-        #endregion
 
-        #region 基本的递归遍历方法
+
+    /// <summary>
+    /// 递归遍历二叉树
+    /// </summary>
+    /// <param name="node"></param>
         //前序遍历
         public void PreOrder(Node<T> node)
         {
@@ -132,7 +135,7 @@ namespace Tree
             }
         }
 
-        // Method03:后序遍历
+        //后序遍历
         public void PostOrder(Node<T> node)
         {
             if (node != null)
@@ -143,9 +146,12 @@ namespace Tree
                 Console.Write(node.data);
             }
         }
-        #endregion
 
-        #region 基本的非递归遍历方法
+
+        /// <summary>
+        /// 利用堆栈遍历二叉树
+        /// </summary>
+        /// <param name="node"></param>
         //前序遍历
         public void PreOrderNoRecurise(Node<T> node)
         {
@@ -222,12 +228,12 @@ namespace Tree
             {
                 currentNode = stackIn.Pop();
                 stackOut.Push(currentNode);
-                // 左子树压栈
+                //1. 左子树压栈
                 if (currentNode.lchild != null)
                 {
                     stackIn.Push(currentNode.lchild);
                 }
-                // 右子树压栈
+                //2.右子树压栈
                 if (currentNode.rchild != null)
                 {
                     stackIn.Push(currentNode.rchild);
@@ -236,40 +242,11 @@ namespace Tree
 
             while (stackOut.Count > 0)
             {
-                // 依次遍历各节点
+                //3.依次遍历各节点
                 Node<T> outNode = stackOut.Pop();
                 Console.Write(outNode.data);
             }
         }
 
-        //层次遍历（广度优先遍历）
-        public void LevelOrder(Node<T> node)
-        {
-            if (root == null)
-            {
-                return;
-            }
-
-            Queue<Node<T>> queueNodes = new Queue<Node<T>>();
-            queueNodes.Enqueue(node);
-            Node<T> tempNode = null;
-            // 利用队列先进先出的特性存储节点并输出
-            while (queueNodes.Count > 0)
-            {
-                tempNode = queueNodes.Dequeue();
-                Console.Write(tempNode.data);
-
-                if (tempNode.lchild != null)
-                {
-                    queueNodes.Enqueue(tempNode.lchild);
-                }
-
-                if (tempNode.rchild != null)
-                {
-                    queueNodes.Enqueue(tempNode.rchild);
-                }
-            }
-        }
-        #endregion
     }
 }
