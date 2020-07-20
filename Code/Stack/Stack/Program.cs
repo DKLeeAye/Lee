@@ -1,5 +1,4 @@
 ﻿using System;
-using List;
 
 namespace Stack
 {
@@ -7,106 +6,71 @@ namespace Stack
     {
         static void Main(string[] args)
         {
-            CStack stack = new CStack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(4);
-            stack.ShowStack();
-            stack.Pop();
-            stack.ShowStack();
-            stack.Clear();
-            stack.ShowStack();
-          
+            // 基于链表的栈
+            LinkStackTest();
+            // 基于数组的栈
+            ArrayStackTest();
         }
-    }
 
-    public class CStack
-    {
-        private Clist m_List;
-        public CStack()
+
+       /// <summary>
+       /// 栈（链表）测试
+       /// </summary>
+        static void LinkStackTest()
         {
-            m_List = new Clist();
-        }
-        //压栈
-        public void Push(int PushValue)
-        {
-            m_List.Append(PushValue);
-        }
-        //弹出
-        public int Pop()
-        {
-            int PopValue;
-            if (!IsNullStack())
+            LinkStack<int> stack = new LinkStack<int>();
+            Console.WriteLine("01初始化堆栈，当前为空栈");
+            Console.WriteLine("IsEmpty:{0}", stack.IsEmpty());
+            
+
+            Random rand = new Random();
+            for (int i = 0; i < 10; i++)
             {
-                MoveTop();
-                PopValue = m_List.GetCurrentValue();
-                m_List.Delete();
-                return PopValue;
+                stack.Push(rand.Next(1, 10));//随机生成1—10压栈
             }
-            return 2147483647;
-        }
+            Console.WriteLine("02随机压入1-10内10个数据");
+            Console.WriteLine("IsEmpty:{0}", stack.IsEmpty());
+            Console.WriteLine("Size:{0}", stack.Size);
 
-        //判断是否为空栈
-        public bool IsNullStack()
-        {
-            if (m_List.IsNull())
-                return true;
-            return false;
-        }
-
-        //堆栈个数
-        public int StackListCount
-        {
-            get
+            Console.WriteLine("03弹出栈内10个元素，依次打印他们的值");
+            for (int i = 0; i < 10; i++)
             {
-                return m_List.ListCount;
+                int node = stack.Pop();
+                Console.Write(node + " ");//依次打印弹出元素，用“ ”隔开
             }
+            Console.WriteLine();
+            Console.WriteLine("IsEmpty:{0}", stack.IsEmpty());
+            Console.WriteLine("Size:{0}", stack.Size);
         }
 
-        //移动到栈底
-        public void MoveBottom()
+        /// <summary>
+        /// 栈（数组）测试
+        /// </summary>
+        static void ArrayStackTest()
         {
-            m_List.MoveFrist();
-        }
-        //移动到栈顶
-       public void MoveTop()
-        {
-            m_List.MoveLast();
+            ArrayStack<int> stack = new ArrayStack<int>(10);
+            Console.WriteLine("01初始化堆栈，当前为空栈");
+            Console.WriteLine("IsEmpty:{0}", stack.IsEmpty());
+
+            Random rand = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                stack.Push(rand.Next(1, 10));//随机生成1—10压栈
+            }
+            Console.WriteLine("02随机压入1-10内10个数据");
+            Console.WriteLine("IsEmpty:{0}", stack.IsEmpty());
+            Console.WriteLine("Size:{0}", stack.Size);
+
+            Console.WriteLine("03弹出栈内10个元素，依次打印他们的值");
+            for (int i = 0; i < 10; i++)
+            {
+                int node = stack.Pop();
+                Console.Write(node + " ");//依次打印弹出元素，用“ ”隔开
+            }
+            Console.WriteLine();
+            Console.WriteLine("IsEmpty:{0}", stack.IsEmpty());
+            Console.WriteLine("Size:{0}", stack.Size);
         }
 
-        //向上
-        public void MoveUp()
-        {
-            m_List.MoveNext();
-        }
-
-        //向下
-        public void MoveDown()
-        {
-            m_List.MovePrevious();
-        }
-
-        //获得当前的值
-        public int GetCurrentValue()
-        {
-            return m_List.GetCurrentValue();
-        }
-        //删除当前的节点
-        public void Delete()
-        {
-            m_List.Delete();
-        }
-        //清空堆栈
-        public void Clear()
-        {
-            m_List.Clear();
-        }
-
-        public void ShowStack()
-        {
-            m_List.ShowList(m_List);
-        }
-        
     }
 }
