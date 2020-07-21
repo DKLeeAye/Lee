@@ -7,10 +7,17 @@ namespace Tree
         static void Main(string[] args)
         {
             MyBinaryTreeBasicTest();
-          
-           
 
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("点击任意键查看线索二叉树测试结果");
             Console.ReadKey();
+
+            //线索二叉树测试
+            Console.WriteLine("建立线索二叉树，中序遍历,有排序的效果");
+            Console.WriteLine("除了第一个数字作为线索二叉树的开头节点外");
+            int[] datal = { 0, 10, 20, 30, 100, 399, 453, 43, 237, 373, 655 };
+            ThreadBinaryTree<int> tree = new ThreadBinaryTree<int>(datal);
+            tree.MidOrder();
         } 
         static void MyBinaryTreeBasicTest()
         {

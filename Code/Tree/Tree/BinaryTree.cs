@@ -238,7 +238,7 @@ namespace Tree
                 {
                     stackIn.Push(currentNode.rchild);
                 }
-            }
+            }//在此while中完成判断节点是否有左右节点并将判断完的元素按照顺序压入stackOut栈内
 
             while (stackOut.Count > 0)
             {
