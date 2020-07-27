@@ -51,19 +51,7 @@ public class Block : MonoBehaviour {
 		}
 
 		StartCoroutine(CheckInput());
-		StartCoroutine(Delay((1 / Manager.manager.blockNormalFallSpeed) * 2));
 		StartCoroutine(Fall());
-	}
-
-
-	IEnumerator Delay(float time)
-	{
-		var t = 0f;
-		while (t <= time)
-		{
-			t += Time.deltaTime;
-			yield return null;
-		}
 	}
 
     //ÏÂÂä
