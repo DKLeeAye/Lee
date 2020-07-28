@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\my5code\\ChatRoom\\Server\\Server\\Server.csproj",
+      "projectUniqueName": "F:\\code\\ChatRoomDemo\\Server\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "F:\\my5code\\ChatRoom\\Server\\Server\\Server.csproj",
+      "projectPath": "F:\\code\\ChatRoomDemo\\Server\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\v_idaqingli\\.nuget\\packages\\",
-      "outputPath": "F:\\my5code\\ChatRoom\\Server\\Server\\obj\\",
+      "outputPath": "F:\\code\\ChatRoomDemo\\Server\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\v_idaqingli\\AppData\\Roaming\\NuGet\\NuGet.Config",

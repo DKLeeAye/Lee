@@ -11,3 +11,16 @@ F:\my5code\ChatRoom\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreComp
 F:\my5code\ChatRoom\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
 F:\my5code\ChatRoom\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
 F:\my5code\ChatRoom\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+F:\my5code\Server\Server\bin\Debug\netcoreapp3.1\Server.exe
+F:\my5code\Server\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+F:\my5code\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+F:\my5code\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
+F:\my5code\Server\Server\bin\Debug\netcoreapp3.1\Server.dll
+F:\my5code\Server\Server\bin\Debug\netcoreapp3.1\Server.pdb
+F:\my5code\Server\Server\obj\Debug\netcoreapp3.1\Server.csprojAssemblyReference.cache
+F:\my5code\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+F:\my5code\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+F:\my5code\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+F:\my5code\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
+F:\my5code\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
+F:\my5code\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
