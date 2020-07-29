@@ -26,11 +26,12 @@ using System.Net.Sockets;
             listenfd.Bind(ipEp);//给listenfd套接字绑定IP和端口
 
             //listen
-            listenfd.Listen(0);//开启监听，等待客户端连接 参数backlog指定队列中最多可容纳等待接受的连接数 0代表不限制
+            listenfd.Listen(0);//开启监听，等待客户端连接
             Console.WriteLine("服务器启动成功");
 
             //接受
             listenfd.BeginAccept(AcceptCallback, listenfd);
+
             //等待
             Console.ReadLine();
         }
@@ -42,9 +43,10 @@ using System.Net.Sockets;
                 Console.WriteLine("服务器Accept");
                 Socket listenfd = (Socket)ar.AsyncState;
                 Socket clientfd = listenfd.EndAccept(ar);//新客户端的socket
-                //clients列表
+                
                 ClientState state = new ClientState();
                 state.socket = clientfd;
+
                 clients.Add(clientfd, state);
 
                 //接收数据
@@ -75,7 +77,9 @@ using System.Net.Sockets;
                 }
 
                 string recvStr = System.Text.Encoding.Default.GetString(state.readBuff, 0, count);
-                byte[] sendBytes = System.Text.Encoding.Default.GetBytes(recvStr);
+                string sendStr = DateTime.Now + recvStr;
+                Console.WriteLine(sendStr);
+                byte[] sendBytes = System.Text.Encoding.Default.GetBytes(sendStr);
                 //clientfd.Send(sendBytes);
                 //遍历所有用户，发送信息
                 foreach (ClientState s in clients.Values)

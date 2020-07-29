@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ff5sqsgwQaxfHbt7KP7CB1+rOfGFKWAVIajdi5gwG4ML1bc0znwNmZGvJw2rf4gN1RD1cXNRUbckYF+4Ym4YAQ==",
+  "dgSpecHash": "SGDSA1NJb2vTrC6bvKevi9DAExOaGxnFny3UB5IGSwdQVptUkoRS6kEDPr8152SNDBa9HKEAG1XlqMaXKTtgIA==",
   "success": true,
-  "projectFilePath": "F:\\code\\ChatRoomDemo\\Server\\Server\\Server.csproj",
+  "projectFilePath": "F:\\my5code\\Server\\Server\\Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
