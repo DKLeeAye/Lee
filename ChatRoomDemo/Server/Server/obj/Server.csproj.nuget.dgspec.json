@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\my5code\\Server\\Server\\Server.csproj": {}
+    "F:\\my5code\\ChatRoomDemo\\Server\\Server\\Server.csproj": {}
   },
   "projects": {
-    "F:\\my5code\\Server\\Server\\Server.csproj": {
+    "F:\\my5code\\ChatRoomDemo\\Server\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\my5code\\Server\\Server\\Server.csproj",
+        "projectUniqueName": "F:\\my5code\\ChatRoomDemo\\Server\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "F:\\my5code\\Server\\Server\\Server.csproj",
+        "projectPath": "F:\\my5code\\ChatRoomDemo\\Server\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\v_idaqingli\\.nuget\\packages\\",
-        "outputPath": "F:\\my5code\\Server\\Server\\obj\\",
+        "outputPath": "F:\\my5code\\ChatRoomDemo\\Server\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\v_idaqingli\\AppData\\Roaming\\NuGet\\NuGet.Config",

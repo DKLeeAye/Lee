@@ -51,7 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ChatClient.cs" />
+     <Compile Include="Assets\Scripts\Client.cs" />
      <Compile Include="Assets\Scripts\NetManager.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
