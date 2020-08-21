@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3b7pGHNFARf2k8aHn2eluwFCdp0EeXjmhpm8TdZqueLsVdGkGfheSLng0GINGCjAPS6n6bbK8RONQbI0xmb/Lw==",
+  "dgSpecHash": "cleo/KUzcP/KqlFwWp0+xhgJC1g84kgGc2uIj7Rkp+vizryG7Sd4UO/hBBjy8tp3rdS+2TiSzLtcRpRuwaxVPw==",
   "success": true,
-  "projectFilePath": "F:\\my5code\\ChatRoomDemo\\Server\\Server\\Server.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\code\\ChatRoomDemo\\Server\\Server\\Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\v_idaqingli\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
